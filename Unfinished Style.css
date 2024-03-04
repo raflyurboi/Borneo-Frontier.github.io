@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #6d380c;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -35,7 +35,7 @@ main {
     margin: 0 auto;
     padding: 10px;
     text-align: center;
-    background-color: #333;
+    background-color: #6d380c;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -47,14 +47,14 @@ main {
 }
 
 footer {
-    background-color: #333;
+    background-color: #6d380c;
     color: #fff;
     padding: 20px 0;
+    
 }
 
 .container {
     max-width: 1200px;
-    height: 50vh;
     margin: 0 auto;
     padding: 0 20px;
 }
