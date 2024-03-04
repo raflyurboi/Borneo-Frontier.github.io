@@ -1,0 +1,480 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Warna latar belakang putih */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar {
+    background-color: #3b674b; /* Warna latar belakang navbar */
+    color: #ffffff; /* Warna teks navbar */
+    padding: 10px 0;
+    position: fixed; /* Membuat navbar tetap pada posisi atas */
+    width: 100%; /* Menempatkan navbar sesuai lebar layar */
+    z-index: 1000; /* Membuat navbar tampil di atas konten lain */
+}
+
+.navbar .logo h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #ffffff; /* Warna teks logo */
+    vertical-align: middle;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right; /* Membuat daftar navbar tampil di sebelah kanan */
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    color: #ffffff; /* Warna teks tautan navbar */
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline; /* Efek hovering pada tautan navbar */
+}
+
+/* Efek titik pada logo */
+.dot {
+    color: #00ff00; /* Warna titik */
+}
+#our-purpose {
+    position: relative; /* Add position relative to enable absolute positioning for the gradient */
+}
+
+#our-purpose::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Set the height of the gradient */
+    background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); /* Set gradient from black to transparent */
+}
+
+#our-purpose .container {
+    height: 120vh;
+    display: flex;  
+    justify-content: flex-start; /* Align content to the left */
+    align-items: flex-start; /* Align items to the top */
+    text-align: justify; /* Justify text content */
+    position: relative; /* Add position relative */
+    z-index: 1; /* Ensure text content is above the gradient */
+}
+
+.text-content {
+    flex: 1; /* Allow text content to take remaining space */
+    margin-right: 20px; /* Add some spacing between text and image */
+    margin-top: 45vh;
+}
+
+.huge-heading {
+    font-size: 72px; /* Huge font size for the heading */
+    margin-bottom: 20px; /* Add some spacing below the heading */
+    
+}
+
+#our-purpose p {
+    margin-bottom: 20px; /* Add spacing between paragraphs */
+}
+
+.image-content {
+    flex: 1; /* Allow image content to take remaining space */
+    margin-top: 51vh;
+    margin-left: 50px; /* Add some spacing between text and image */
+    max-width: 50%; /* Ensure the image does not exceed the container width */
+}
+
+#our-purpose img {
+    max-width: 100%; /* Make sure the image does not exceed the container width */
+    height: auto; /* Ensure the image maintains its aspect ratio */
+}
+
+@media (max-width: 768px) {
+    #our-purpose .container {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+        align-items: center; /* Align items to the center */
+        text-align: center; /* Center-align text content */
+    }
+
+    .text-content {
+        margin-right: 0; /* Remove margin on smaller screens */
+        margin-bottom: 20px; /* Add some spacing between text and image */
+        text-align: justify;
+    }
+
+    .huge-heading {
+        font-size: 48px; /* Reduce font size of the heading on smaller screens */
+    }
+
+    .image-content {
+        margin-top: 20px; /* Add some spacing between text and image */
+        margin-left: auto; /* Move the image to the right on smaller screens */
+        margin-right: auto; /* Move the image to the right on smaller screens */
+        max-width: 100%; /* Ensure the image does not exceed the container width on smaller screens */
+    }
+}
+
+    
+.welcome-section {
+    background-image: url('Welcome\ Pict.jpeg');
+    background-size: cover;
+    background-position: center;
+    font-size: heading large;
+    color: #ffffff;
+    font-weight: bold;;
+    font-style: oblique;
+    text-align: center;
+    padding: 100px 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Add position relative */
+}
+.welcome-section::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0; /* Position at the top */
+    left: 0; /* Position at the left */
+    width: 100%;
+    height: 100%; /* Cover the entire height of the welcome section */
+    background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+.welcome-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.welcome-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    font-size: 18px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+.join-button {
+    background-color: #8ab07e; /* Warna latar belakang */
+    text-align: center; /* Memusatkan konten */
+    padding: 50px 0; /* Menambahkan jarak atas dan bawah */
+    height: 100vh; /* Mengisi tinggi sesuai tinggi viewport */
+    display: flex; /* Menggunakan flexbox untuk mengatur tata letak */
+    justify-content: center; /* Memusatkan secara horizontal */
+    align-items: center; /* Memusatkan secara vertikal */
+}
+
+.join-button .container {
+    margin-top: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.join-heading {
+    font-size: 108px; /* Ukuran huruf 1,5 kali lebih besar */
+    color: #000000; /* Warna teks lebih gelap */
+    text-align: left; /* Penyesuaian posisi teks ke kiri */
+    margin-right: 30px; /* Jarak dari tombol */
+    line-height: 1; /* Mengatur jarak vertikal antar baris */
+    cursor: pointer; /* Mengubah kursor menjadi pointer */
+    transition: color 0.3s; /* Efek transisi warna */
+    margin-bottom: 0;
+}
+
+.cta-button {
+    display: block; /* Menjadikan tombol sebagai blok agar lebarnya mengikuti konten */
+    width: fit-content; /* Lebar tombol mengikuti lebar konten */
+    margin: 20px auto 0; /* Margin atas 20px, auto untuk memusatkan, dan 0 di bawah */
+    padding: 10px 20px; /* Padding tombol */
+    background-color: transparent; /* Warna latar belakang transparan */
+    color: #000000; /* Warna teks */
+    border: 2px solid transparent; /* Garis tepi transparan */
+    font-size: 24px; /* Ukuran font */
+    text-decoration: none; /* Menghilangkan dekorasi tautan */
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Efek transisi saat hover */
+    cursor: pointer; /* Mengubah kursor menjadi pointer */
+}
+
+.cta-button:hover {
+    background-color: #6d380c; /* Warna latar belakang saat dihover */
+    color: #ffffff; /* Warna teks saat dihover */
+    border-color: #8ab07e; /* Warna garis tepi saat dihover */
+}
+
+#the-team .container {
+    text-align: center; /* Memusatkan isi kontainer */
+}
+
+.team-heading {
+    font-size: 50px;
+    color: #6d380c; /* Mengubah warna teks menjadi biru */
+    margin-bottom: 20px;
+    letter-spacing: 2px; /* Menambahkan spasi antar huruf */
+}
+
+.team-members {
+    display: flex;
+    justify-content: center; /* Memusatkan anggota tim secara horizontal */
+    flex-wrap: wrap; /* Mengatur perataan ulang anggota tim */
+    margin-top: 20px; /* Menambahkan jarak di atas anggota tim */
+}
+
+.team-member {
+    width: 30%; /* Mengatur lebar untuk setiap anggota tim */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.team-member img {
+    width: 100%; /* Mengisi lebar gambar ke dalam parent */
+    max-width: 200px; /* Lebar maksimum gambar */
+    border-radius: 10px; /* Mengatur sudut gambar menjadi persegi panjang dengan sudut melengkung */
+}
+
+.member-info h4 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #333; /* Mengubah warna teks menjadi lebih gelap */
+}
+
+.member-info h5 {
+    color: #888;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.explore-projects {
+    height: 80vh;
+}
+.explore-projects .huge-heading {
+    text-align: center;
+    margin-top: 10vh;
+}
+.project-blogs {
+    background-color: #f2f2f2;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.project-blogs .container-project {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.project-blogs .huge-heading {
+    font-size: 72px;
+    margin-bottom: 20px;
+    text-align: center; /* Memusatkan heading */
+}
+
+.projects-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Tambahkan jarak antara konten */
+}
+
+.project-blogs .project {
+    flex: 1; /* Membuat konten memanfaatkan ruang secara merata */
+    max-width: 30%; /* Maksimum lebar konten */
+    margin: 0 10px 30px;
+}
+
+@media (max-width: 992px) {
+    .project-blogs .project {
+        max-width: 40%; /* Mengatur lebar konten pada layar yang lebih kecil */
+    }
+}
+
+@media (max-width: 768px) {
+    .project-blogs .project {
+        max-width: 50%; /* Mengatur lebar konten pada layar yang lebih kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-blogs .project {
+        max-width: 100%; /* Mengatur lebar konten pada layar sangat kecil */
+    }
+}
+
+.project-blogs .project img {
+    width: 100%; /* Mengatur ukuran gambar agar memenuhi lebar konten */
+    height: auto;
+    border-radius: 5px;
+}
+
+.project-blogs .project-button {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid #ff6600;
+    color: #ff6600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.project-blogs .project-button:hover {
+    background-color: #ff6600;
+    color: #fff;
+}
+
+
+/* Penataan untuk tombol */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 1em;
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+/* Efek hover untuk tombol */
+.cta-button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+
+#latest-project {
+    background-color: #f2f2f2;
+    padding: 50px 0;
+    text-align: center; /* Memusatkan judul */
+}
+
+.project-info,
+.project-button {
+    text-align: center; /* Memusatkan konten di dalam proyek */
+}
+
+#latest-project .container {
+    max-width: 1200px; /* Menentukan lebar maksimum container */
+    margin: 0 auto; /* Memusatkan container */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Memusatkan konten secara horizontal */
+    text-align: center; /* Memusatkan konten dalam container */
+}
+.project {
+    width: calc(30% - 20px); /* Mengatur lebar proyek */
+    margin: 0 10px 30px; /* Menambahkan jarak antara proyek */
+    display: inline-block;
+    vertical-align: top;
+}
+.container-project {
+    text-align: center;
+}
+@media (max-width: 992px) {
+    .project {
+        width: calc(40% - 20px); /* Mengatur lebar proyek pada layar yang lebih kecil */
+    }
+}
+
+@media (max-width: 768px) {
+    .project {
+        width: calc(50% - 20px); /* Mengatur lebar proyek pada layar yang lebih kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .project {
+        width: calc(100% - 20px); /* Mengatur lebar proyek pada layar sangat kecil */
+    }
+}
+    
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.project-info {
+    background-color: #f2f2f2;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.project-info h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.project-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 1s;
+}
+.project-button:hover {
+    background-color: #cc5500;
+}
+
+.section-title {
+    text-align: center;
+}
+footer {
+    background-color: #3b674b;
+    color: #ffffff;
+    padding: 50px 0;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 10px;
+}
+
+
+
